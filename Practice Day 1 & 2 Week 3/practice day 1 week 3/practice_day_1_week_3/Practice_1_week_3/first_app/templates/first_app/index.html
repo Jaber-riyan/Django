@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice_Day_1</title>
+</head>
+<body>
+    <h1>This is app page</h1>
+    <br>
+    <hr>
+    <!--This is length filter-->
+    <h1>Lenght filter : {{value | length}}</h1>
+
+    <hr>
+    <!--This is join filter-->
+    <h1>Join filter: {{value | join:'_'}}</h1>
+
+    <hr>
+    <!--This is date filter-->
+    <h1>Date Filter: {{date | date:"D d M Y"}}</h1>
+
+    <hr>
+    <!--This is empty filter-->
+    <h1>Empty Filter : {{empty | default:"An Empty"}}</h1>
+
+
+    <hr>
+    <!--This is add filter-->
+    <h1>Add filter : {{add | add:"9"}}</h1>
+
+
+    <hr>
+    <!--This is Capfirst-->
+    <h1>Capfirst Filter : {{capfirst | capfirst}}</h1>
+
+
+    <hr>
+    <!--This is cut filter-->
+    <h1>Cut Filter : {{cut | cut:"-"}}</h1>
+
+
+    <hr>
+    <!--This is dictsort-->
+    <h1>Dictsort Filter : {{dictsort | dictsort:"age"}}</h1>
+
+    <hr>
+    <!--This is first filter-->
+    <h1>First Filter : {{dictsort | first}}</h1>
+    <h1>First Filter 2 : {{value | first}}</h1>
+
+
+    <hr>
+    <!--This is Last filter-->
+    <h1>Last Filter : {{value | last}}</h1>
+
+
+    <hr>
+    <!--This is linenumbers filter-->
+    <h1>Line Number : {{ linenumber | linenumbers }}</h1>
+
+    <hr>
+    <!--This is lower case filter-->
+    <h1>Lower Filter : {{lower | lower}}</h1>
+
+
+    <hr>
+    <!--This is Upper Filter-->
+    <h1>Upper Filter : {{'upper' | upper}}</h1>
+
+    <hr>
+    <!--This is title filter-->
+    <h1>Title Filter : {{title | title}}</h1>
+
+    <hr>
+    <!--This is random filter-->
+    <h1>Random Filter : {{random | random}}</h1>
+
+
+    <hr>
+    <!--This is slice filter-->
+    <h1>Slice Filter : {{value | slice:"2"}}</h1>
+
+
+
+    <hr>
+    <!--This is time filter-->
+    <h1>Time Filter : {{date | date:"H\h : i\m"}}</h1>
+
+
+    <hr>
+    <!--This is truncateschars Filter-->
+    <h1>Truncateschars Filter : {{ name | truncatechars:7 }}</h1>
+
+
+    <hr>
+    <!--This is wordcount filter-->
+    <h1>Word Count Filter : {{ name | wordcount }}</h1>
+
+
+    <hr>
+    <!--This is truncatewords-->
+    <h1>Truncatewords Filter : {{ name | truncatewords:2 }}</h1>
+
+
+    <hr>
+    <!--This is Stripstags Filter-->
+    <h1>Stripstags Filter : <b>This</b> is <em>a</em> <button>Button</button> | striptags</h1>
+    
+
+
+    <hr>
+    <!--This is make list filter-->
+    <h1>Make List Filter : {{upper | make_list}}</h1>
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+</body>
+</html>
