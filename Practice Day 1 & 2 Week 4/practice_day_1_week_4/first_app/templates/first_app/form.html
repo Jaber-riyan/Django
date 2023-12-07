@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <br><br>
+    <div styel="width:50%;" class="container">
+        <h3>Fill Up The Django From : </h3>
+        <form>
+            {% csrf_token %}
+            {{form | crispy}}
+            <button class="btn btn-primary">Submit</button>
+            <hr><br><br>
+        </form>
+    </div>
+{% endblock content %}

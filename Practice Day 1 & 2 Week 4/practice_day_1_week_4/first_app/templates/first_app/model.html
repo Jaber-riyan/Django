@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+    <div>
+        <form style="width:50%; margin:auto; magin-top:50px" action="">
+            {% csrf_token %}
+            <h3>Fill Up Model Form : </h3>
+            {{model | crispy}}
+            <button class="btn btn-primary">Submit</button>
+            <hr><br><br>
+        </form>
+    </div>
+{% endblock content %}
