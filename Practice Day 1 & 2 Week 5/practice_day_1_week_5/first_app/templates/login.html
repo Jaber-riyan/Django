@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %} 
+
+{% block content %}
+
+{% if messages %}
+  {% for message in messages %}
+  <div class="alert bg-warning mx-auto mt-4" role="alert" style="width:50%;">
+    <button type="button" class="border border-warning rounded btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="alert" aria-label="Close"></button>
+
+      <div class="text-center">{{message}}</div>
+  </div>
+  {% endfor %}
+{% endif %}
+
+<div style="width: 50%; margin: auto; margin-top:100px">
+  <form method="post" novalidate>
+    <h3>Sign Up Form : </h3>
+    {% csrf_token %} 
+    {{form | crispy}}
+    {% comment %} <div >
+        {% for fm in form %} 
+            {{fm.label_tag}} 
+            {{fm}}
+            {{fm.errors|striptags}}
+        {% endfor%}
+    </div> {% endcomment %}
+    <button class="btn btn-warning mt-3 mb-2">Login</button> <br>
+    <small class="mb-5"> Does't have an account  <a href="{% url 'signuppage' %}">Sign Up</a></small>
+  </form>
+</div>
+
+{% endblock content %}
